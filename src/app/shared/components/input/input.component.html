@@ -1,0 +1,11 @@
+<div class="input-wrapper" [ngClass]="{ 'has-error': hasError, 'is-valid': isValid, secondary: variant === 'secondary' }">
+  <input
+    [type]="type"
+    [(ngModel)]="value"
+    (ngModelChange)="validateInput($event)"
+    [placeholder]="placeholder"
+    [attr.name]="name" />
+
+  <span class="icon valid-icon" *ngIf="isValid"></span>
+  <span class="icon error-icon" *ngIf="hasError"></span>
+</div>

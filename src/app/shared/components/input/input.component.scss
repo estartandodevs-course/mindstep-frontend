@@ -1,0 +1,119 @@
+@import '../../../../styles/base/_variables';
+@import '../../../../styles/base/_fonts';
+.input-wrapper {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: $primary-font;
+  font-weight: 400;
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid transparent;
+    font-size: 14px;
+    border-radius: 7px;
+    background-color: $botao-pressionado;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      color: $cinza-inativo-1;
+    }
+
+    &:focus {
+      background-color: $boto-1;
+      border-color: $boto-1;
+      color: $cinza-input;
+      &::placeholder {
+        color: $cinza-input;
+      }
+    }
+  }
+
+  &.is-valid input {
+    background-color: #46466e;
+    border-color: #46466e;
+  }
+
+  &.is-valid .valid-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url('/assets/icons/success-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &.has-error input {
+    border-color: $error-color;
+    background-color: $botao-pressionado;
+    color: $error-color;
+  }
+
+  &.has-error .error-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url('/assets/icons/error-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &.secondary {
+    input {
+      background-color: $cinza-inativo-1;
+      color: $cinza-input-secondary;
+
+      &::placeholder {
+        color: $cinza-input-secondary;
+      }
+
+      &:focus {
+        background-color: $cinza-inativo;
+        border-color: $cinza-inativo;
+        &::placeholder {
+          color: $cinza-inativo-1;
+        }
+      }
+    }
+
+    &.is-valid input {
+      background-color: $cinza-inativo-1;
+      color: #e1dff1;
+    }
+
+    &.has-error input {
+      background-color: #e0e0e0;
+      color: $error-color;
+      border-color: $error-color;
+    }
+
+    .valid-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #e1dff1;
+      font-size: 18px;
+    }
+
+    .error-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6d6a7c;
+      font-size: 18px;
+    }
+  }
+}
