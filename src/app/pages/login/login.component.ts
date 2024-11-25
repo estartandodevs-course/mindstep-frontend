@@ -14,10 +14,9 @@ export class LoginComponent {
 
   onLogin() {
     console.log('Login:', this.email, this.password);
-    // Adicionar lógica de autenticação
   }
 
   navigateToSignup() {
-    this.router.navigate(['/signup']); // Rota para a tela de cadastro
+    this.router.navigate(['/registration-step-one-page']);
   }
 }

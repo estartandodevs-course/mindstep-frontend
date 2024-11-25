@@ -31,7 +31,7 @@
       </div>
     </form>
 
-    <p>Cadastre-se aqui</p>
+    <p (click)="navigateToSignup()" (keydown.enter)="navigateToSignup()" role="button" tabindex="0">Cadastre-se aqui</p>
 
     <div class="social-buttons">
       <app-socials-button variant="facebook"> Facebook </app-socials-button>
