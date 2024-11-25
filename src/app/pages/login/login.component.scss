@@ -1,7 +1,6 @@
 @import '../../../styles/base/fonts';
 @import '../../../styles/base/variables';
 
-
 .login-container {
   display: flex;
   flex-direction: column;
@@ -9,12 +8,31 @@
   padding: 16px;
   margin-top: 55px;
   height: 100%;
+  background-color: $background;
 }
 
 .login-logo {
   width: 288px;
   height: 255px;
   flex-shrink: 0;
+}
+.email-label{
+  font-family: $primary-font;
+  font-size: 16px;
+  color: $boto-1;
+  font-weight: 549;
+  line-height: 145%;
+  gap: 10px;
+
+}
+
+.senha-label{
+  font-family: $primary-font;
+  font-size: 16px;
+  color: $boto-1;
+  font-weight: 549;
+  line-height: 145%;
+  gap: 10px;
 }
 
 form {
@@ -24,11 +42,12 @@ form {
   margin-top: 20px;
 }
 
-app-button[variant="primary"] {
-  width: 200px;
-  text-align: center;
-}
+.button-login {
+  width: 65px;
+  margin: 0 auto;
+  margin-top:20px;
 
+}
 .social-buttons {
   display: flex;
   flex-direction: column;
@@ -36,6 +55,7 @@ app-button[variant="primary"] {
   margin-top: 16px;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
 }
 
 p {
@@ -46,6 +66,7 @@ p {
   text-align: center;
   font-weight: 500;
   cursor: pointer;
+  margin-top:40px;
 
   &:hover {
     text-decoration: underline;

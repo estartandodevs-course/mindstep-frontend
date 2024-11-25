@@ -3,30 +3,32 @@
   <app-header></app-header>
 
   <div class="login-content">
-    <!-- Logo da aplicação -->
     <img src="assets/images/login-image.png" alt="MindStep Logo" class="login-logo" />
 
     <form (submit)="onLogin()">
-      <!-- Rótulo e Input de Email/Celular -->
-      <div class="input-container">
+      <div class="email-label">
         <label for="email">Email/Celular</label>
-        <app-input id="email" placeholder="Digite seu email ou celular" [(ngModel)]="email" name="email" required></app-input>
+      </div>
+      <div class="email-input-container">
+        <app-input id="email" placeholder="usuario@estartando.com.br" [(ngModel)]="email" name="email" required></app-input>
       </div>
 
-      <!-- Rótulo e Input de Senha -->
-      <div class="input-container">
-        <label for="password">Senha</label>
+      <div class="senha-label">
+        <label for="password">Senha:</label>
+      </div>
+      <div class="senha-input-container">
         <app-input
           id="password"
-          placeholder="Digite sua senha"
+          placeholder="*********"
           [(ngModel)]="password"
           name="password"
           type="password"
           required></app-input>
       </div>
 
-      <!-- Botão de Login -->
-      <app-button [variant]="'primary'" type="submit"> Login </app-button>
+      <div class="button-login">
+        <app-button [variant]="'primary'" type="submit">Login</app-button>
+      </div>
     </form>
 
     <p>Cadastre-se aqui</p>
