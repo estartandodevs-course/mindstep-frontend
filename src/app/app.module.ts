@@ -10,6 +10,7 @@ import { InputComponent } from './shared/components/input/input.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { RegistrationStepOnePageComponent } from './pages/registration-step-one-page/registration-step-one-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
     InputComponent,
     LoginComponent,
     HeaderComponent,
+    RegistrationStepOnePageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
