@@ -1,62 +1,107 @@
 <div class="registration-container">
   <app-header></app-header>
 
-  <!-- Barra de progresso -->
   <div class="progress-bar">
     <span class="step active"></span>
     <span class="step"></span>
     <span class="step"></span>
   </div>
 
-  <form (ngSubmit)="onSubmit()" #form="ngForm" class="form">
-    <app-input
-      label="Nome completo"
-      placeholder="Digite seu nome completo"
-      [(ngModel)]="registrationData.fullName"
-      name="fullName"
-      required>
-    </app-input>
-
-    <!-- Email -->
-    <app-input
-      label="Email"
-      placeholder="usuario@seutratando.com.br"
-      [(ngModel)]="registrationData.email"
-      name="email"
-      type="email"
-      required>
-    </app-input>
-
-    <!-- Senha -->
-    <app-input
-      label="Senha"
-      placeholder="Mínimo 8 caracteres (letras e números)"
-      [(ngModel)]="registrationData.password"
-      name="password"
-      type="password"
-      required>
-    </app-input>
-
-    <!-- Data de Nascimento -->
-    <app-input label="Data de Nascimento" [(ngModel)]="registrationData.birthDate" name="birthDate" type="date"> </app-input>
-
-    <!-- Celular -->
-    <app-input label="Celular" placeholder="(xx) xxxxx-xxxx" [(ngModel)]="registrationData.phone" name="phone" type="tel">
-    </app-input>
-
-    <!-- Estado e Cidade -->
-    <div class="inline-fields">
-      <app-input label="Estado" placeholder="Digite seu estado" [(ngModel)]="registrationData.state" name="state"> </app-input>
-      <app-input label="Cidade" placeholder="Digite sua cidade" [(ngModel)]="registrationData.city" name="city"> </app-input>
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div class="label-name">
+      <label for="fullName">Nome completo</label>
+    </div>
+    <div class="input-name">
+      <app-input
+        id="fullName"
+        placeholder="Digite seu nome completo"
+        [(ngModel)]="registrationData.fullName"
+        name="fullName"
+        #fullName="ngModel"></app-input>
     </div>
 
-    <!-- Formação -->
-    <app-input label="Formação" placeholder="Digite sua formação" [(ngModel)]="registrationData.education" name="education">
-    </app-input>
+    <div class="input-email">
+      <app-input
+        id="email"
+        placeholder="usuario@estartando.com.br"
+        [(ngModel)]="registrationData.email"
+        name="email"
+        type="email"
+        [pattern]="emailPattern"
+        #email="ngModel"></app-input>
+    </div>
 
-    <!-- Botão "Avançar" -->
-    <div class="button-login">
-      <app-button [variant]="'primary'" type="submit">avançar</app-button>
+    <div class="label-senha-container">
+      <div class="label-senha">
+        <label for="password">Senha</label>
+      </div>
+      <div class="label-senha2">
+        <label for="password">8 caracteres (letras e números)</label>
+      </div>
+    </div>
+    <div class="input-container">
+      <app-input
+        id="password"
+        placeholder="********"
+        [(ngModel)]="registrationData.password"
+        name="password"
+        type="password"
+        [pattern]="passwordPattern"
+        #password="ngModel"></app-input>
+    </div>
+
+    <div class="label-dataNascimento">
+      <label for="birthDate">Data de Nascimento</label>
+    </div>
+    <div class="input-dataNascimento">
+      <app-input
+        id="birthDate"
+        placeholder="21/02/1989"
+        [(ngModel)]="registrationData.birthDate"
+        name="birthDate"
+        type="text"
+        (keypress)="formatDateInput($event)"
+        width="120px"></app-input>
+    </div>
+
+    <div class="label-celular">
+      <label for="phone">Celular</label>
+    </div>
+    <div class="input-celular">
+      <app-input
+        id="phone"
+        placeholder="(xx) xxxxx-xxxx"
+        [(ngModel)]="registrationData.phone"
+        name="phone"
+        type="tel"
+        (input)="formatPhone($event)"
+        width="120px"></app-input>
+    </div>
+
+    <div class="inline-fields">
+      <div class="field">
+        <label for="state">Estado</label>
+        <app-input id="state" placeholder="RJ" [(ngModel)]="registrationData.state" name="state" width="45px"> </app-input>
+      </div>
+      <div class="field">
+        <label for="city">Cidade</label>
+        <app-input id="city" placeholder="Digite sua cidade" [(ngModel)]="registrationData.city" name="city"> </app-input>
+      </div>
+    </div>
+
+    <div class="label-education">
+      <label for="education">Formação</label>
+    </div>
+    <div class="input-education">
+      <app-input
+        id="education"
+        placeholder="Digite sua formação"
+        [(ngModel)]="registrationData.education"
+        name="education"></app-input>
+    </div>
+
+    <div class="button-avancar">
+      <app-button [variant]="'primary'" type="submit">Avançar</app-button>
     </div>
   </form>
 </div>

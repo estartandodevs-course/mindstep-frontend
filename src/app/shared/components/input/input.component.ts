@@ -11,12 +11,13 @@ export class InputComponent {
   @Input() placeholder: string = '';
   @Input() name: string = '';
   @Input() validationPattern: string = '';
+  @Input() width: string = '300px';
+  @Input() height: string = '';
 
   value: string = '';
   isValid: boolean = false;
   hasError: boolean = false;
 
-  // Função para validar o input
   validateInput(value: string): void {
     if (this.validationPattern) {
       const regex = new RegExp(this.validationPattern);
