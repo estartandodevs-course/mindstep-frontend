@@ -8,18 +8,6 @@
   margin-bottom: 24px;
 }
 
-.step {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ccc;
-  transition: background-color 0.3s;
-}
-
-.step.active {
-  background-color: #4caf50;
-}
-
 .registration-container {
   display: flex;
   flex-direction: column;
@@ -173,3 +161,38 @@ app-input {
   justify-content: flex-end;
   align-items: center;
 }
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+
+  // Linha conectando os círculos
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    right: 10px;
+    height: 2px;
+    background-color: black;
+    z-index: 0;
+    transform: translateY(-50%);
+  }
+
+  .step {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $cinza-inativo;
+
+    &.active {
+      background-color: $boto-1;
+    }
+  }
+}
+
