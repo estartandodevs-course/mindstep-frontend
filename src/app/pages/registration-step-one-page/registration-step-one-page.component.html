@@ -1,6 +1,7 @@
 <div class="registration-container">
   <app-header></app-header>
 
+  <!-- Barra de Progresso -->
   <div class="progress-bar">
     <span class="step" [class.active]="currentStep >= 1"></span>
     <span class="step" [class.active]="currentStep >= 2"></span>
@@ -8,6 +9,7 @@
   </div>
 
   <form #form="ngForm">
+    <!-- Step 1 -->
     <div *ngIf="currentStep === 1">
       <div class="label-name">
         <label for="fullName">Nome completo</label>
@@ -90,8 +92,12 @@
         </div>
         <div class="field">
           <label for="city">Cidade</label>
-          <app-input id="city" placeholder="Digite sua cidade" [(ngModel)]="registrationData.city" name="city" width="200px">
-          </app-input>
+          <app-input
+            id="city"
+            placeholder="Digite sua cidade"
+            [(ngModel)]="registrationData.city"
+            name="city"
+            width="200px"></app-input>
         </div>
       </div>
 
@@ -111,41 +117,54 @@
       </div>
     </div>
 
+    <!-- Step 2 -->
     <div *ngIf="currentStep === 2">
       <div class="label-name">
         <label for="learningChallenges">Quais os maiores desafios que você enfrenta em termos de aprendizado?</label>
-        <app-input
-          id="learningChallenges"
-          placeholder="Digite aqui"
-          [(ngModel)]="registrationData.learningChallenges"
-          name="learningChallenges"></app-input>
+        <div class="input-dropdown">
+          <app-dropdown
+            id="learningChallenges"
+            [(ngModel)]="registrationData.learningChallenges"
+            name="learningChallenges"
+            [options]="learningChallengesOptions">
+          </app-dropdown>
+        </div>
       </div>
 
       <div class="label-name">
         <label for="focusActivities">Quais atividades ajudam você a se concentrar melhor?</label>
-        <app-input
-          id="focusActivities"
-          placeholder="Digite aqui"
-          [(ngModel)]="registrationData.focusActivities"
-          name="focusActivities"></app-input>
+        <div class="input-dropdown">
+          <app-dropdown
+            id="focusActivities"
+            [(ngModel)]="registrationData.focusActivities"
+            name="focusActivities"
+            [options]="focusActivitiesOptions">
+          </app-dropdown>
+        </div>
       </div>
 
-      <div class="label-name">
+      <div class="label-learning-style">
         <label for="learningStyle">Qual é o seu estilo de aprendizado?</label>
-        <app-input
-          id="learningStyle"
-          placeholder="Digite aqui"
-          [(ngModel)]="registrationData.learningStyle"
-          name="learningStyle"></app-input>
+        <div class="radio-group">
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.learningStyle" name="learningStyle" value="Instrucao" /> Instruções
+          </label>
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.learningStyle" name="learningStyle" value="Pratica" /> Prática
+          </label>
+        </div>
       </div>
 
-      <div class="label-name">
+      <div class="label-neurodivergent">
         <label for="neurodivergent">Você se considera neurodivergente?</label>
-        <app-input
-          id="neurodivergent"
-          placeholder="Digite aqui"
-          [(ngModel)]="registrationData.neurodivergent"
-          name="neurodivergent"></app-input>
+        <div class="radio-group">
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.neurodivergent" name="neurodivergent" value="yes" /> Sim
+          </label>
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.neurodivergent" name="neurodivergent" value="no" /> Não
+          </label>
+        </div>
       </div>
 
       <div class="button-avancar">
@@ -153,6 +172,7 @@
       </div>
     </div>
 
+    <!-- Step 3 -->
     <div *ngIf="currentStep === 3">
       <div class="label-name">
         <h1>testando 3</h1>
@@ -161,7 +181,6 @@
           [(ngModel)]="registrationData.learningChallenges"
           name="learningChallenges"></app-input>
       </div>
-
       <div class="button-avancar">
         <app-button [variant]="'primary'" (click)="goToNextStep()">Avançar</app-button>
       </div>

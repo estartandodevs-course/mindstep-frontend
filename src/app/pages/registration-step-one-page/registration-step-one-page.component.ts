@@ -26,6 +26,32 @@ export class RegistrationStepOnePageComponent {
   emailPattern = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$';
   passwordPattern = '^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$';
 
+  learningStyleOptions = [
+    { label: 'Visual', value: 'visual' },
+    { label: 'Auditivo', value: 'auditory' },
+    { label: 'Cinestésico', value: 'kinesthetic' },
+  ];
+
+  neurodivergentOptions = [
+    { label: 'Sim', value: 'yes' },
+    { label: 'Não', value: 'no' },
+  ];
+
+  // Adicionando as opções faltantes
+  learningChallengesOptions = [
+    { label: 'Dificuldade de concentração', value: 'concentration' },
+    { label: 'Dificuldade em organizar tarefas', value: 'organization' },
+    { label: 'Dificuldade de memória', value: 'memory' },
+    { label: 'Outro', value: 'other' },
+  ];
+
+  focusActivitiesOptions = [
+    { label: 'Ouvir música', value: 'music' },
+    { label: 'Exercícios físicos', value: 'exercise' },
+    { label: 'Meditação', value: 'meditation' },
+    { label: 'Outro', value: 'other' },
+  ];
+
   formatDateInput(event: KeyboardEvent) {
     const input = event.target as HTMLInputElement;
     let value = input.value.replace(/\D/g, '');
