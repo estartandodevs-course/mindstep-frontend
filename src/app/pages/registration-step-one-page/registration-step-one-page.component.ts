@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./registration-step-one-page.component.scss'],
 })
 export class RegistrationStepOnePageComponent {
-  currentStep = 1; // Controla o step atual
+  currentStep = 1;
 
   registrationData = {
     fullName: '',
@@ -18,15 +18,17 @@ export class RegistrationStepOnePageComponent {
     city: '',
     education: '',
     learningChallenges: '',
-    supportTools: '',
+    focusActivities: '',
+    learningStyle: '',
+    neurodivergent: '',
   };
 
-  emailPattern = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$';
+  emailPattern = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$';
   passwordPattern = '^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$';
 
   formatDateInput(event: KeyboardEvent) {
     const input = event.target as HTMLInputElement;
-    let value = input.value.replace(/\D/g, ''); // Remove all non-numeric characters
+    let value = input.value.replace(/\D/g, '');
 
     if (value.length > 2 && value.length <= 4) {
       value = value.slice(0, 2) + '/' + value.slice(2);
@@ -39,7 +41,7 @@ export class RegistrationStepOnePageComponent {
 
   formatPhone(event: Event) {
     const input = event.target as HTMLInputElement;
-    let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+    let value = input.value.replace(/\D/g, '');
 
     if (value.length > 2 && value.length <= 6) {
       value = `(${value.slice(0, 2)}) ${value.slice(2)}`;

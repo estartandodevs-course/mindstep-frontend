@@ -21,6 +21,10 @@
           #fullName="ngModel"></app-input>
       </div>
 
+      <div class="label-email">
+        <label for="email">E-mail</label>
+      </div>
+
       <div class="input-email">
         <app-input
           id="email"
@@ -86,7 +90,8 @@
         </div>
         <div class="field">
           <label for="city">Cidade</label>
-          <app-input id="city" placeholder="Digite sua cidade" [(ngModel)]="registrationData.city" name="city"> </app-input>
+          <app-input id="city" placeholder="Digite sua cidade" [(ngModel)]="registrationData.city" name="city" width="200px">
+          </app-input>
         </div>
       </div>
 
@@ -105,20 +110,49 @@
         <app-button [variant]="'primary'" (click)="goToNextStep()">Avançar</app-button>
       </div>
     </div>
-    <!-- Step 2 -->
+
     <div *ngIf="currentStep === 2">
       <div class="label-name">
-        <h1>testando</h1>
+        <label for="learningChallenges">Quais os maiores desafios que você enfrenta em termos de aprendizado?</label>
         <app-input
+          id="learningChallenges"
           placeholder="Digite aqui"
           [(ngModel)]="registrationData.learningChallenges"
           name="learningChallenges"></app-input>
       </div>
-      <!-- Adicione outros campos aqui -->
+
+      <div class="label-name">
+        <label for="focusActivities">Quais atividades ajudam você a se concentrar melhor?</label>
+        <app-input
+          id="focusActivities"
+          placeholder="Digite aqui"
+          [(ngModel)]="registrationData.focusActivities"
+          name="focusActivities"></app-input>
+      </div>
+
+      <div class="label-name">
+        <label for="learningStyle">Qual é o seu estilo de aprendizado?</label>
+        <app-input
+          id="learningStyle"
+          placeholder="Digite aqui"
+          [(ngModel)]="registrationData.learningStyle"
+          name="learningStyle"></app-input>
+      </div>
+
+      <div class="label-name">
+        <label for="neurodivergent">Você se considera neurodivergente?</label>
+        <app-input
+          id="neurodivergent"
+          placeholder="Digite aqui"
+          [(ngModel)]="registrationData.neurodivergent"
+          name="neurodivergent"></app-input>
+      </div>
+
       <div class="button-avancar">
         <app-button [variant]="'primary'" (click)="goToNextStep()">Avançar</app-button>
       </div>
     </div>
+
     <div *ngIf="currentStep === 3">
       <div class="label-name">
         <h1>testando 3</h1>
@@ -127,7 +161,7 @@
           [(ngModel)]="registrationData.learningChallenges"
           name="learningChallenges"></app-input>
       </div>
-      <!-- Adicione outros campos aqui -->
+
       <div class="button-avancar">
         <app-button [variant]="'primary'" (click)="goToNextStep()">Avançar</app-button>
       </div>
