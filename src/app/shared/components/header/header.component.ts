@@ -9,7 +9,6 @@ import { Location } from '@angular/common';
 export class HeaderComponent {
   constructor(private location: Location) {}
 
-  // Método chamado ao clicar no botão
   onBack(): void {
     this.location.back();
   }

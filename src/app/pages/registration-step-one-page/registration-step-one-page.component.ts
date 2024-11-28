@@ -37,7 +37,6 @@ export class RegistrationStepOnePageComponent {
     { label: 'Não', value: 'no' },
   ];
 
-  // Adicionando as opções faltantes
   learningChallengesOptions = [
     { label: 'Dificuldade de concentração', value: 'concentration' },
     { label: 'Dificuldade em organizar tarefas', value: 'organization' },
@@ -85,6 +84,12 @@ export class RegistrationStepOnePageComponent {
   }
 
   goToPreviousStep() {
+    if (this.currentStep > 1) {
+      this.currentStep--;
+    }
+  }
+
+  onBack(): void {
     if (this.currentStep > 1) {
       this.currentStep--;
     }

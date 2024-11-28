@@ -1,7 +1,6 @@
 <div class="registration-container">
   <app-header></app-header>
 
-  <!-- Barra de Progresso -->
   <div class="progress-bar">
     <span class="step" [class.active]="currentStep >= 1"></span>
     <span class="step" [class.active]="currentStep >= 2"></span>
@@ -9,7 +8,6 @@
   </div>
 
   <form #form="ngForm">
-    <!-- Step 1 -->
     <div *ngIf="currentStep === 1">
       <div class="label-name">
         <label for="fullName">Nome completo</label>
@@ -172,17 +170,30 @@
       </div>
     </div>
 
-    <!-- Step 3 -->
     <div *ngIf="currentStep === 3">
-      <div class="label-name">
-        <h1>testando 3</h1>
-        <app-input
-          placeholder="Digite aqui"
-          [(ngModel)]="registrationData.learningChallenges"
-          name="learningChallenges"></app-input>
+      <div class="label-neurodivergent">
+        <label for="neurodivergent">Você já usou ferramentas de apoio, como agendas visuais ou organizadores?</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.neurodivergent" name="neurodivergent" value="yes" /> Sim
+          </label>
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.neurodivergent" name="neurodivergent" value="no" /> Não
+          </label>
+        </div>
+        <label for="neurodivergent">As ferremantas utilizadas foram úteis?</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.neurodivergent" name="neurodivergent" value="yes" /> Sim
+          </label>
+          <label>
+            <input type="radio" [(ngModel)]="registrationData.neurodivergent" name="neurodivergent" value="no" /> Não
+          </label>
+        </div>
       </div>
+
       <div class="button-avancar">
-        <app-button [variant]="'primary'" (click)="goToNextStep()">Avançar</app-button>
+        <app-button [variant]="'primary'" (click)="goToNextStep()" width="120px">Ir para Home</app-button>
       </div>
     </div>
   </form>
