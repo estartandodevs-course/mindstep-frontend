@@ -100,6 +100,10 @@
     "schematicCollections": [
       "@angular-eslint/schematics"
     ],
+<<<<<<< HEAD
     "analytics": "9b1e43e1-e5db-4995-b1ed-402e682ec017"
+=======
+    "analytics": false
+>>>>>>> feat/componentd/registration-step-one-page
   }
 }

@@ -1,0 +1,42 @@
+<div class="login-container">
+  <!-- Importação do header -->
+  <app-header></app-header>
+
+  <div class="login-content">
+    <img src="assets/images/login-image.png" alt="MindStep Logo" class="login-logo" />
+
+    <form (submit)="onLogin()">
+      <div class="email-label">
+        <label for="email">Email/Celular</label>
+      </div>
+      <div class="email-input-container">
+        <app-input id="email" placeholder="usuario@estartando.com.br" [(ngModel)]="email" name="email" required></app-input>
+      </div>
+
+      <div class="senha-label">
+        <label for="password">Senha:</label>
+      </div>
+      <div class="senha-input-container">
+        <app-input
+          id="password"
+          placeholder="*********"
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+          required></app-input>
+      </div>
+
+      <div class="button-login">
+        <app-button [variant]="'primary'" type="submit">Login</app-button>
+      </div>
+    </form>
+
+    <p (click)="navigateToSignup()" (keydown.enter)="navigateToSignup()" role="button" tabindex="0">Cadastre-se aqui</p>
+
+    <div class="social-buttons">
+      <app-socials-button variant="facebook"> Facebook </app-socials-button>
+      <app-socials-button variant="google-icon"> Google </app-socials-button>
+      <app-socials-button variant="email"> E-mail </app-socials-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="dropdown">
+  <button class="dropdown-btn" (click)="toggleDropdown()">
+    {{ selectedOption || 'Selecione uma opção' }}
+    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+      <path
+        d="M0.768957 6.2258L8.09241 0.790319C8.1796 0.725803 8.27404 0.680212 8.37576 0.653545C8.47747 0.626448 8.58645 0.6129 8.7027 0.6129C8.81894 0.6129 8.92792 0.626448 9.02964 0.653545C9.13135 0.680212 9.2258 0.725803 9.31299 0.790319L16.6582 6.2258C16.8617 6.37634 16.9634 6.56451 16.9634 6.79032C16.9634 7.01613 16.8544 7.20967 16.6364 7.37096C16.4185 7.53225 16.1642 7.6129 15.8736 7.6129C15.583 7.6129 15.3287 7.53225 15.1107 7.37096L8.7027 2.62903L2.29468 7.37096C2.09125 7.5215 1.84074 7.59677 1.54315 7.59677C1.24498 7.59677 0.986917 7.51613 0.768957 7.35484C0.550999 7.19355 0.442019 7.00537 0.442019 6.79032C0.442019 6.57527 0.550999 6.38709 0.768957 6.2258Z"
+        fill="#46467C" />
+    </svg>
+  </button>
+
+  <ul *ngIf="isDropdownOpen" class="dropdown-menu">
+    <li
+      *ngFor="let option of options"
+      (click)="selectOption(option)"
+      (keydown.enter)="selectOption(option)"
+      class="dropdown-item"
+      tabindex="0">
+      {{ option }}
+    </li>
+  </ul>
+</div>
