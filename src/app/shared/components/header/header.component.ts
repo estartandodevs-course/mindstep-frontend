@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Location } from '@angular/common';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +6,14 @@ import { Location } from '@angular/common';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private location: Location) {}
+  @Input() currentStep: number = 1;
+  @Output() backEvent = new EventEmitter<void>();
 
   onBack(): void {
-    this.location.back();
+    if (this.currentStep > 1) {
+      this.backEvent.emit();
+    } else {
+      console.log('Voltar ao login');
+    }
   }
 }

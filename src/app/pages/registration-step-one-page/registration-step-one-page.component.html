@@ -1,5 +1,5 @@
 <div class="registration-container">
-  <app-header></app-header>
+  <app-header [currentStep]="currentStep" (backEvent)="goToPreviousStep()"> </app-header>
 
   <div class="progress-bar">
     <span class="step" [class.active]="currentStep >= 1"></span>
