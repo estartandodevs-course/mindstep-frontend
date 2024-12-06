@@ -2,12 +2,12 @@
 @import '../../../../styles/base/variables';
 @import '../../../../styles/base/fonts';
 .header {
-    width: 100vw;
-    height: 180px;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    background: rgb(70, 70, 124);
-    background: linear-gradient(180deg, #46467c 0%, #d0d0ff 60%);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    z-index: 100;
+  width: 100vw;
+  height: 180px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: rgb(70, 70, 124);
+  background: linear-gradient(180deg, #46467c 0%, #d0d0ff 60%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
