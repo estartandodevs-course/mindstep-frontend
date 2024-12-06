@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
@@ -11,5 +11,19 @@ export class HomeComponent {
 
   goBack(): void {
     this.location.back();
+  }
+
+  isDropdownOpen = false;
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  @HostListener('document:click', ['$event'])
+  closeDropdown(event: Event) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.dropdown')) {
+      this.isDropdownOpen = false;
+    }
   }
 }

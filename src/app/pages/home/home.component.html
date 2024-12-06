@@ -1,9 +1,20 @@
 <div class="header">
   <div class="header-content">
     <div class="content-icon">
-      <button (click)="goBack()">
-        <img class="icon" src="../../../../assets/back.svg" alt="Voltar" />
-      </button>
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <img src="../../../assets/dropdown.svg" alt="" />
+        </button>
+        <div class="dropdown-content" *ngIf="isDropdownOpen">
+          <a href="#">Dados Pessoais</a>
+          <a href="#">Personalizar</a>
+          <a href="#">Alterar Senha</a>
+          <a href="#">Suporte</a>
+          <a href="#">Termos de Uso</a>
+          <a href="#">Excluir Conta</a>
+          <a href="#">Sair</a>
+        </div>
+      </div>
 
       <div class="seach-notification">
         <button>
