@@ -1,0 +1,43 @@
+@import '../../../styles/base/variables';
+@import '../../../styles/base/fonts';
+.header-content {
+  width: 100vw;
+  position: absolute;
+}
+
+.content-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw;
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 25px;
+  button {
+    background: none;
+    cursor: pointer;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    background: none;
+  }
+}
+
+.img-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.seach-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
