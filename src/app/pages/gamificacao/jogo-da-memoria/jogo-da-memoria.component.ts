@@ -11,7 +11,7 @@ interface Card {
   templateUrl: './jogo-da-memoria.component.html',
   styleUrl: './jogo-da-memoria.component.scss',
 })
-export class JogoDaMemoriaComponent {
+export class JogoDaMemoriaComponent implements OnInit {
   cards: Card[] = [];
   flippedCards: Card[] = [];
   lockBoard: boolean = false;
