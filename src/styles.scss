@@ -4,5 +4,7 @@
 @import '../src/styles/base/reset';
 @import '../src/styles/base/variables';
 :root {
-  background-color: $background;
+    background-color: $background;
+    width: 100%;
+    overflow-x: hidden;
 }
