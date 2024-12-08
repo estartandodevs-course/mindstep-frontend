@@ -2,6 +2,25 @@
   <app-profile-header></app-profile-header>
 </div>
 <div class="main-content">
+  <div class="button-container">
+    <!-- Botão Concluir -->
+    <div class="btn-concluir">
+      <button class="btn concluir" [class.active]="aulaConcluida" (click)="toggleConcluir()">
+        <span class="icon">&#x25BC;</span>
+        {{ aulaConcluida ? 'Concluído' : 'Concluir' }}
+      </button>
+    </div>
+
+    <!-- Botão Favoritar -->
+    <div class="btn-favoritar">
+      <button class="btn favoritar" [class.active]="aulaFavorita" (click)="toggleFavoritar()" title="Favoritar">
+        <span class="icon">
+          <img src="../../../../assets/gallery-video-aula/favoritar.svg" alt="" />
+        </span>
+      </button>
+    </div>
+  </div>
+
   <div class="video-player">
     <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
     <h3>Matemática e Estatísca</h3>
@@ -9,9 +28,12 @@
   </div>
 
   <div class="gallery">
-    <img src="path/to/image1.jpg" alt="Miniatura 1" />
-    <img src="path/to/image2.jpg" alt="Miniatura 2" />
-    <img src="path/to/image3.jpg" alt="Miniatura 3" />
+    <div class="gallery-content">
+      <img src="../../../../assets/gallery-video-aula/image1.jpeg" alt="Miniatura 1" />
+      <img src="../../../../assets/gallery-video-aula/image2.jpeg" alt="Miniatura 2" />
+      <img src="../../../../assets/gallery-video-aula/image3.jpeg" alt="Miniatura 3" />
+      <img src="../../../../assets/gallery-video-aula/image4.jpeg" alt="Miniatura " />
+    </div>
   </div>
   <div class="pomodoro-timer">
     <div class="title-pomodoro">
@@ -25,9 +47,15 @@
     </div>
 
     <div class="controls">
-      <button (click)="iniciar()" [disabled]="rodando">Iniciar</button>
-      <button (click)="pausar()" [disabled]="!rodando">Pausar</button>
-      <button (click)="resetar()">Resetar</button>
+      <button (click)="iniciar()" [disabled]="rodando">
+        <img src="../../../../assets/pomodoro/play.svg" alt="" />
+      </button>
+      <button (click)="pausar()" [disabled]="!rodando">
+        <img src="../../../../assets/pomodoro/editar.svg" alt="" />
+      </button>
+      <button (click)="resetar()">
+        <img src="../../../../assets/pomodoro/relogio.svg" alt="" />
+      </button>
     </div>
   </div>
 </div>
