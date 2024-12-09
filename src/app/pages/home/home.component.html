@@ -1,0 +1,96 @@
+<div class="header">
+  <div class="header-content">
+    <div class="content-icon">
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <img src="../../../assets/dropdown.svg" alt="" />
+        </button>
+        <div class="dropdown-content" *ngIf="isDropdownOpen">
+          <a href="#">Dados Pessoais</a>
+          <a href="#">Personalizar</a>
+          <a href="#">Alterar Senha</a>
+          <a href="#">Suporte</a>
+          <a href="#">Termos de Uso</a>
+          <a href="#">Excluir Conta</a>
+          <a href="#">Sair</a>
+        </div>
+      </div>
+
+      <div class="seach-notification">
+        <button>
+          <img class="icon" src="../../../../assets/search.svg" alt="Buscar" />
+        </button>
+
+        <button>
+          <img class="icon notification" src="../../../../assets/notification.svg" alt="Notificações" />
+        </button>
+      </div>
+    </div>
+
+    <div class="img-profile">
+      <img src="../../../../assets/foto-teste.svg" alt="" />
+    </div>
+  </div>
+  <app-profile-header> </app-profile-header>
+</div>
+<div class="home-content">
+  <a href="" routerLink="/home/plano-estudos">
+    <div class="card">
+      <img src="../../../assets/cards/card1.svg" alt="" />
+      <p>Plano de estudos</p>
+      <img src="../../../assets/cards/right.svg" alt="" />
+    </div>
+  </a>
+
+  <a href="">
+    <div class="card">
+      <img src="../../../assets/cards/card2.svg" alt="" />
+      <p>Atividades a serem feitas</p>
+      <img src="../../../assets/cards/right.svg" alt="" />
+    </div>
+  </a>
+
+  <a href="">
+    <div class="card">
+      <img src="../../../assets/cards/card3.svg" alt="" />
+      <p>Vizualizar próximas atividades</p>
+      <img src="../../../assets/cards/right.svg" alt="" />
+    </div>
+  </a>
+
+  <a href="">
+    <div class="card">
+      <img src="../../../assets/cards/card4.svg" alt="" />
+      <p>Metas diárias</p>
+      <img src="../../../assets/cards/right.svg" alt="" />
+    </div>
+  </a>
+
+  <a routerLink="/home/gamificacao">
+    <div class="card">
+      <img src="../../../assets/cards/card5.svg" alt="" />
+      <p>Gamificação</p>
+      <img src="../../../assets/cards/right.svg" alt="" />
+    </div>
+  </a>
+
+  <a href="">
+    <div class="card">
+      <img src="../../../assets/cards/card6.svg" alt="" />
+      <p>Perfil profissional</p>
+      <img src="../../../assets/cards/right.svg" alt="" />
+    </div>
+  </a>
+
+  <a href="">
+    <div class="card">
+      <img src="../../../assets/cards/card7.svg" alt="" /> Comunidade
+      <img src="../../../assets/cards/right.svg" alt="" />
+    </div>
+  </a>
+</div>
+<footer>
+  <app-footer></app-footer>
+</footer>
+
+<router-outlet> </router-outlet>

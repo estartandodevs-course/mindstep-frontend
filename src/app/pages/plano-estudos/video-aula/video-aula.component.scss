@@ -1,0 +1,213 @@
+@import '../../../../styles/base/fonts';
+@import '../../../../styles/base/variables';
+@import '../../../../styles/base/reset';
+.main-content {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+/* Estilização básica */
+
+.button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Botões gerais */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ebe6ff;
+  color: #6558f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn .icon {
+  font-size: 14px;
+}
+
+/* Hover para os botões */
+
+.btn:hover {
+  background-color: rgba($color: #6558f5, $alpha: 0.4);
+  color: #ffffff;
+}
+
+/* Estilos específicos do botão Concluir */
+
+.concluir {
+  background-color: #ebe6ff;
+  height: 30px;
+  width: 80px;
+  font-size: 14px;
+  font-family: $primary-font;
+  font-weight: 400;
+  border: 1px solid #6558f5;
+  border-radius: 8px;
+}
+
+.concluir.active {
+  background-color: #6558f5;
+  color: #ffffff;
+}
+
+/* Estilos específicos do botão Favoritar */
+
+.favoritar {
+  background-color: none;
+  padding: 8px;
+  width: 18px;
+  height: 19px;
+}
+
+.favoritar.active {
+  background-color: #6558f5;
+  border-radius: 0 -10px -10px 0;
+}
+
+.favoritar .icon {
+  margin-right: 0;
+}
+
+.video-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  iframe {
+    width: 100%;
+    height: 280px;
+    border: 1px solid $boto-1;
+  }
+  .notes-input {
+    width: 98%;
+    max-width: 600px;
+    padding: 8px;
+    border: 1px solid $boto-1;
+    border-radius: 0 0 8px 8px;
+  }
+  h3 {
+    padding: 2px 5px;
+    height: 20px;
+    background-color: $boto-1;
+    color: #fff;
+    width: 100%;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: end;
+  }
+}
+
+.gallery-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  overflow-x: auto;
+  width: 300px;
+  height: 70px;
+  background-color: $background-p;
+  padding: 0px 20px;
+  box-shadow: 1px 1px 2px 1px rgba($color: #000000, $alpha: 0.4);
+}
+
+.gallery img {
+  width: 74px;
+  height: 58px;
+  cursor: pointer;
+  border: 1px solid $boto-1;
+}
+
+.pomodoro-timer {
+  color: #fff;
+  border-radius: 8px;
+  background: rgba($color: #c30000, $alpha: 0.4);
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 0 10px 0;
+  width: 230px;
+  height: 140px;
+  .title-pomodoro {
+    padding: 1px 25px;
+    background: #c30000;
+    border-radius: 8px 8px 0 0;
+    font-family: $primary-font;
+    h2 {
+      font-size: 18px;
+      font-weight: 200;
+    }
+  }
+  .temporizador {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-family: $primary-font;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 200;
+    }
+    .temp {
+      border: 1px solid #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  button {
+    background: none;
+    cursor: pointer;
+    img {
+      height: 15px;
+      width: 15px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 80px;
+  z-index: 101;
+}
+
+.activity-btn {
+  background-color: $botao-pressionado;
+  color: $texto-login;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: $primary-font;
+  font-weight: 400;
+}

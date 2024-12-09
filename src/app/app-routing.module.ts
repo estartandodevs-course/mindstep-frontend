@@ -6,6 +6,8 @@ import { RegistrationStepOnePageComponent } from './pages/registration-step-one-
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'registration-step-one-page', component: RegistrationStepOnePageComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule) },
 ];
 
 @NgModule({
