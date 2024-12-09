@@ -1,5 +1,5 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; // Certifique-se de importar CUSTOM_ELEMENTS_SCHEMA se for necessário.
 
 import { AppComponent } from './app.component';
 
@@ -30,6 +30,6 @@ import { HomeModule } from './pages/home/home.module';
   imports: [BrowserModule, AppRoutingModule, FormsModule, HomeModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Adicionado se o DropdownComponent for um Web Component
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Incluído para suporte a Web Components, se necessário.
 })
 export class AppModule {}
