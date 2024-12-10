@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlanoEstudosComponent } from './plano-estudos.component';
 import { VideoAulaComponent } from './video-aula/video-aula.component';
 import { AulaTextoComponent } from './aula-texto/aula-texto.component';
+import { AtividadeComponent } from './atividade/atividade.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'aula-texto',
     component: AulaTextoComponent,
+  },
+  {
+    path: 'atividade',
+    component: AtividadeComponent,
   },
 ];
 

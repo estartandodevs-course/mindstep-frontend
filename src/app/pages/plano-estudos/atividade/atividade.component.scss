@@ -1,0 +1,71 @@
+@import'../../../../styles/base/fonts';
+@import'../../../../styles/base/reset';
+@import'../../../../styles/base/variables';
+.main-content {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.label-atividade-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $boto-1;
+    font-weight: 400;
+    font-family: $primary-font;
+    padding-top: 15px;
+    .background {
+        display: flex;
+        background-color: $botao-pressionado;
+        border-radius: 5px;
+        height: 28px;
+        text-align: center;
+    }
+    h2 {
+        width: 160px;
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        width: 58px;
+        img {
+            height: 13.13px;
+            width: 11.25px;
+        }
+    }
+}
+
+.atividade-content {
+    margin-top: 20px;
+    height: 150vh;
+    border: 1px solid $boto-1;
+    border-radius: 5px;
+    padding-top: 10px;
+    overflow: auto;
+    padding: 10px;
+    .atividade-texto {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    p {
+        font-family: $primary-font;
+        font-size: 16px;
+        font-weight: 500;
+        color: $boto-1;
+        line-height: 23px;
+    }
+    textarea {
+        border-radius: 10px;
+        border: 1px solid $boto-1;
+    }
+}

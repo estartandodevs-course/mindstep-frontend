@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './atividade.component.html',
   styleUrl: './atividade.component.scss',
 })
-export class AtividadeComponent {}
+export class AtividadeComponent {
+  comment: string = '';
+}

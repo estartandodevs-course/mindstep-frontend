@@ -5,13 +5,13 @@ import { SharedModule } from '../../shared/shared.module';
 
 import { PlanoEstudosComponent } from './plano-estudos.component';
 import { planoEstudosRoutingModule } from './plano-estudos-routing.module';
-import { VideoAulaComponent } from './video-aula/video-aula.component';
-import { AulaTextoComponent } from './aula-texto/aula-texto.component';
-import { AtividadeComponent } from './atividade/atividade.component';
+import { AtividadeModule } from './atividade/atividade.module';
+import { VideoAulaModule } from './video-aula/video-aula.module';
+import { AulaTextoModule } from './aula-texto/aula-texto.module';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, planoEstudosRoutingModule],
-  declarations: [PlanoEstudosComponent, VideoAulaComponent, AulaTextoComponent, AtividadeComponent],
+  imports: [CommonModule, SharedModule, planoEstudosRoutingModule, AtividadeModule, VideoAulaModule, AulaTextoModule],
+  declarations: [PlanoEstudosComponent],
   exports: [],
 })
 export class PlanoEstudosModule {}
