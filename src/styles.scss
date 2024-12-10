@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import '../src/styles/base/reset';
+@import '../src/styles/base/variables';
+:root {
+  background-color: $background;
+  width: 100%;
+  overflow-x: hidden;
+}

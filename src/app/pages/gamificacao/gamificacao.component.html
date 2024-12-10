@@ -1,0 +1,46 @@
+<div class="header">
+  <app-profile-header></app-profile-header>
+</div>
+<div class="main-content">
+  <span class="ultimos-jogos">
+    <p>últimos jogos</p>
+  </span>
+
+  <div class="gif">
+    <a routerLink="jogo-memoria">
+      <p>memória</p>
+      <img src="../../../assets/gif-memoria.gif" alt="" />
+    </a>
+    <a routerLink="jogo-raciocinio">
+      <p>raciocínio lógico</p>
+      <img src="../../../assets/gif-raciocinio.gif" alt="" />
+    </a>
+  </div>
+
+  <span class="span-p">
+    <p>experimente novas habilidades</p>
+  </span>
+</div>
+<div class="footer">
+  <div class="footer-content">
+    <nav class="nav">
+      <div class="nav-home">
+        <img src="../../../assets/menu-gamificacao/nav-home.svg" alt="" />
+        <label for="">Home</label>
+      </div>
+
+      <div class="nav-serch">
+        <img src="../../../assets/search.svg" alt="" />
+        <label for="">Pesquisar Jogos</label>
+      </div>
+
+      <div class="nav-perfil">
+        <img src="../../../assets/menu-gamificacao/nav-perfil.svg" alt="" />
+        <label for="">Meu Perfil</label>
+      </div>
+    </nav>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<router-outlet> </router-outlet>

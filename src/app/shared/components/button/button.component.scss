@@ -1,0 +1,52 @@
+@import '../../../../styles/base/_variables';
+@import '../../../../styles/base/_fonts';
+
+.btn {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $primary-font;
+  font-weight: 400;
+  width: 80px;
+  height: 40px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 7px;
+
+  &.primary {
+    background-color: $boto-1;
+    color: $botao-pressionado;
+    border: none;
+    padding: 10px;
+
+    &:hover {
+      background-color: $botao-pressionado;
+      color: $boto-1;
+    }
+    &:disabled {
+      background-color: none;
+      color: $boto-1;
+      cursor: not-allowed;
+    }
+  }
+
+  &.secondary {
+    background-color: $cinza-inativo-1;
+    color: $cinza-inativo;
+    border: none;
+    padding: 10px;
+
+    &:hover {
+      background-color: $cinza-inativo;
+      color: $cinza-inativo-1;
+    }
+    &:disabled {
+      background-color: none;
+      color: $cinza-inativo-1;
+      cursor: not-allowed;
+    }
+  }
+}
