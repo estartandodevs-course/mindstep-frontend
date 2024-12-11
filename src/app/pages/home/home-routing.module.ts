@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 // componentes
 import { HomeComponent } from './home.component';
+import { MetasDiariasComponent } from '../metas-diarias/metas-diarias.component';
+import { ProximasAtividadesComponent } from '../proximas-atividades/proximas-atividades.component';
 //import { PlanoEstudosComponent } from '../plano-estudos/plano-estudos.component';
 //import { GamificacaoComponent } from '../gamificacao/gamificacao.component';
 
@@ -17,8 +19,16 @@ const routes: Routes = [
     loadChildren: () => import('../plano-estudos/plano-estudos.module').then((m) => m.PlanoEstudosModule),
   },
   {
-    path: 'gamificacao',
+    path: 'home/gamificacao',
     loadChildren: () => import('../gamificacao/gamificacao.module').then((m) => m.GamificacaoModule),
+  },
+  {
+    path: 'home/proximas-atividades',
+    component: ProximasAtividadesComponent,
+  },
+  {
+    path: 'home/metas-diarias',
+    component: MetasDiariasComponent,
   },
 ];
 

@@ -2,7 +2,7 @@
   <div class="header-content">
     <div class="content-icon">
       <div class="dropdown">
-        <button class="dropdown-btn" onclick="toggleDropdown()">
+        <button class="dropdown-btn" (click)="toggleDropdown()">
           <img src="../../../assets/dropdown.svg" alt="" />
         </button>
         <div class="dropdown-content" *ngIf="isDropdownOpen">
@@ -50,15 +50,15 @@
     </div>
   </a>
 
-  <a href="">
+  <a routerLink="home/proximas-atividades">
     <div class="card">
       <img src="../../../assets/cards/card3.svg" alt="" />
-      <p>Vizualizar próximas atividades</p>
+      <p>Visualizar próximas atividades</p>
       <img src="../../../assets/cards/right.svg" alt="" />
     </div>
   </a>
 
-  <a href="">
+  <a routerLink="home/metas-diarias">
     <div class="card">
       <img src="../../../assets/cards/card4.svg" alt="" />
       <p>Metas diárias</p>
@@ -84,7 +84,8 @@
 
   <a href="">
     <div class="card">
-      <img src="../../../assets/cards/card7.svg" alt="" /> Comunidade
+      <img src="../../../assets/cards/card7.svg" alt="" />
+      <p>Comunidade</p>
       <img src="../../../assets/cards/right.svg" alt="" />
     </div>
   </a>

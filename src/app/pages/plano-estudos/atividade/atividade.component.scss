@@ -1,6 +1,6 @@
-@import'../../../../styles/base/fonts';
-@import'../../../../styles/base/reset';
-@import'../../../../styles/base/variables';
+@import '../../../../styles/base/fonts';
+@import '../../../../styles/base/reset';
+@import '../../../../styles/base/variables';
 .main-content {
     width: 90vw;
     margin: 0 auto;
@@ -50,6 +50,11 @@
     padding-top: 10px;
     overflow: auto;
     padding: 10px;
+    position: relative;
+    bottom: -20px;
+    z-index: 102;
+    background: $background;
+    box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.3);
     .atividade-texto {
         width: 90%;
         margin: 0 auto;
@@ -68,4 +73,9 @@
         border-radius: 10px;
         border: 1px solid $boto-1;
     }
+}
+
+.footer {
+    position: relative;
+    z-index: 101;
 }
