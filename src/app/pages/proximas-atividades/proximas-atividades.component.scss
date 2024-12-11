@@ -2,25 +2,24 @@
 @import '../../../styles/base/variables';
 @import '../../../styles/base/reset';
 .main-content {
-    width: 90vw;
-    margin: 0 auto;
-    h3 {
-        text-align: center;
-        font-family: $primary-font;
-        font-size: 20px;
-        font-weight: 500;
-        color: $boto-1;
-        padding: 40px;
-        text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.2);
-    }
+  width: 90vw;
+  margin: 0 auto;
+  h3 {
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 500;
+    color: $boto-1;
+    padding: 40px;
+    text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.2);
+  }
 }
 
 .activities {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
-
 
 /*
 .progress-container {
@@ -53,42 +52,42 @@
 */
 
 .card-materia {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .progress-container-header {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .progress-container-header {
-    li {
-        padding-right: 40px;
-    }
+  li {
+    padding-right: 40px;
+  }
 }
 
 .barra-materia {
-    width: 100%;
-    background-color: $background-p;
-    padding: 20px 10px;
+  width: 100%;
+  background-color: $background-p;
+  padding: 20px 10px;
 }
 
 .chart {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #eef2ff;
-    border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #eef2ff;
+  border-radius: 10px;
 }
 
 .chart-placeholder {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d4d4d4;
-    border-radius: 5px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d4;
+  border-radius: 5px;
 }
