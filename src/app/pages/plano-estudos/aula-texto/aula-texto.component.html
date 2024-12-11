@@ -1,0 +1,53 @@
+<div class="header">
+  <app-profile-header></app-profile-header>
+</div>
+
+<div class="main-content">
+  <div class="button-container">
+    <!-- Botão Concluir -->
+    <div class="btn-concluir">
+      <button class="btn concluir" [class.active]="aulaConcluida" (click)="toggleConcluir()">
+        <span class="icon">&#x25BC;</span>
+        {{ aulaConcluida ? 'Concluído' : 'Concluir' }}
+      </button>
+    </div>
+
+    <!-- Botão Favoritar -->
+    <div class="btn-favoritar">
+      <button class="btn favoritar" [class.active]="aulaFavorita" (click)="toggleFavoritar()" title="Favoritar">
+        <span class="icon">
+          <img src="../../../../assets/gallery-video-aula/favoritar.svg" alt="" />
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="aula-texto-content">
+    <h1>Lorem ipsum</h1>
+    <p>
+      dolor sit amet, consectetur adipisicing elit. Quasi error rerum iusto accusantium illum nemo asperiores quas minima cumque
+      at voluptate explicabo consectetur dignissimos, incidunt quia et reiciendis deleniti sint. Lorem ipsum dolor,
+    </p>
+    sit amet consectetur adipisicing elit. Sint hic, placeat, quisquam ullam est minima quaerat dolor praesentium ipsum porro
+    tempora velit laboriosam nobis! Nemo ut ea architecto natus eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+    numquam aliquam nostrum officiis, voluptates explicabo pariatur sapiente illum quidem dolores quo expedita recusandae quas
+    perspiciatis voluptas accusantium commodi? Harum, eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus culpa
+    cupiditate unde! Quas quos omnis, consequuntur saepe, officia suscipit magni, sapiente odio nobis illum illo? Vel impedit
+    aperiam ut pariatur. Quos laborum, voluptas perferendis a similique omnis quibusdam corporis excepturi amet sit esse beatae ad
+    voluptatum nam et doloremque velit maxime cumque non dolore minima facilis sint! Nemo, aliquid pariatur. Nesciunt, ea vel nam
+    commodi facere, nostrum doloribus esse blanditiis maiores voluptates laborum, iste iusto impedit deserunt excepturi delectus
+    sint. Odit eum a dolore non aut explicabo. Maxime, voluptatem velit. Dolor, repudiandae tenetur eaque, libero architecto ea,
+    deserunt maiores dolorem blanditiis suscipit expedita dolores magni temporibus repellendus unde officia velit! Aliquam iusto
+    impedit, earum eaque eligendi asperiores ab consequatur iste. Aperiam, tempora, sapiente distinctio neque explicabo quo esse
+    nemo dicta architecto assumenda culpa quam ipsam impedit! In repudiandae architecto distinctio, nulla fugiat nemo perferendis
+    ullam voluptatem provident praesentium deleniti temporibus!
+  </div>
+</div>
+
+<footer>
+  <div class="footer">
+    <a routerLink="atividade">
+      <button class="activity-btn">Atividade</button>
+    </a>
+  </div>
+  <app-footer></app-footer>
+</footer>
