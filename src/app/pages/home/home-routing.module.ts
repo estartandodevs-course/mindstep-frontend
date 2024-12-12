@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { MetasDiariasComponent } from '../metas-diarias/metas-diarias.component';
 import { ProximasAtividadesComponent } from '../proximas-atividades/proximas-atividades.component';
+import { PerfilProfissionalComponent } from '../perfil-profissional/perfil-profissional.component';
 //import { PlanoEstudosComponent } from '../plano-estudos/plano-estudos.component';
 //import { GamificacaoComponent } from '../gamificacao/gamificacao.component';
 
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'home/metas-diarias',
     component: MetasDiariasComponent,
+  },
+  {
+    path: 'home/perfil-profissional',
+    component: PerfilProfissionalComponent,
   },
 ];
 

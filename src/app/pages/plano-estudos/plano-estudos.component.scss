@@ -1,112 +1,112 @@
 @import '../../../styles/base/variables';
 @import '../../../styles/base/fonts';
 .header-content {
-  width: 100vw;
-  position: absolute;
+    width: 100vw;
+    position: absolute;
 }
 
 .content-icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 90vw;
-  width: 90vw;
-  margin: 0 auto;
-  padding-top: 25px;
-  button {
-    background: none;
-    cursor: pointer;
-  }
-  img {
-    width: 25px;
-    height: 25px;
-    background: none;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90vw;
+    width: 90vw;
+    margin: 0 auto;
+    padding-top: 25px;
+    button {
+        background: none;
+        cursor: pointer;
+    }
+    img {
+        width: 25px;
+        height: 25px;
+        background: none;
+    }
 }
 
 .img-profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  img {
-    width: 90px;
-    height: 90px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+        width: 90px;
+        height: 90px;
+    }
 }
 
 .seach-notification {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .home-content {
-  width: 80%;
-  margin: 0 auto;
-  h1 {
-    font-family: $primary-font;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    color: $boto-1;
-    padding: 15px 0;
-  }
-  .cards {
-    gap: 16px;
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    label {
-      font-size: 16px;
-      font-weight: 400;
+    width: 80%;
+    margin: 0 auto;
+    h1 {
+        font-family: $primary-font;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        color: $boto-1;
+        padding: 15px 0;
     }
-    span {
-      text-align: start;
-      font-size: 10px;
+    .cards {
+        gap: 16px;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        label {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        span {
+            text-align: start;
+            font-size: 10px;
+        }
     }
-  }
 }
 
 .card {
-  width: 280px;
-  height: 42px;
-  border-radius: 7px;
-  border: none;
-  background-color: $background-p;
-  font-family: $primary-font;
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 1px 1px 3px 1px rgba(#000000, 0.3);
-  color: $boto-1;
-  padding: 18px;
-  img {
-    height: 20px;
-    width: 20px;
-  }
-  .label-porcentagem {
+    width: 280px;
+    height: 42px;
+    border-radius: 7px;
+    border: none;
+    background-color: $background-p;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 500;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    margin: 0 2px;
-    .porcentagem-icon {
-      width: 170px;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      gap: 3px;
-      img {
-        width: 10px;
-        height: 10px;
-      }
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 3px 1px rgba(#000000, 0.3);
+    color: $boto-1;
+    padding: 18px;
+    img {
+        height: 20px;
+        width: 20px;
     }
-  }
+    .label-porcentagem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin: 0 2px;
+        .porcentagem-icon {
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 3px;
+            img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
 }

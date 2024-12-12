@@ -22,7 +22,7 @@
     <div class="materia2 barra-materia">
       <div class="progress-container-header">
         <ul>
-          <li>Português</li>
+          <li>História</li>
         </ul>
         <span>Questões 20</span>
       </div>
@@ -34,7 +34,7 @@
     <div class="materia3 barra-materia">
       <div class="progress-container-header">
         <ul>
-          <li>Português</li>
+          <li>Redação</li>
         </ul>
         <span>Questões 20</span>
       </div>
@@ -44,8 +44,18 @@
       </div>
     </div>
   </div>
-  <div class="chart">
-    <h4>Últimos 7 dias</h4>
-    <div class="chart-placeholder">Gráfico de progresso</div>
+  <div class="chart-container">
+    <h3>{{ title }}</h3>
+    <div class="chart">
+      <div class="day" *ngFor="let day of days" [class.selected]="day.isSelected">
+        <span class="label">{{ day.label }}</span>
+        <div class="bar" [style.height]="day.height"></div>
+        <span class="time">{{ day.time }}</span>
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="footer">
+  <app-footer></app-footer>
 </div>

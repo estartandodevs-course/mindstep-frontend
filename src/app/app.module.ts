@@ -19,7 +19,6 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './pages/home/home.module';
 import { ProximasAtividadesComponent } from './pages/proximas-atividades/proximas-atividades.component';
-
 @NgModule({
   declarations: [
     AppComponent,
