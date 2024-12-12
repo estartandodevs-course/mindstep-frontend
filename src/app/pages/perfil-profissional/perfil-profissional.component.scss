@@ -2,30 +2,30 @@
 @import '../../../styles/base/variables';
 @import '../../../styles/base/reset';
 .main-content {
-    width: 90vw;
-    margin: 0 auto;
-    color: $boto-1;
-    font-family: $primary-font;
+  width: 90vw;
+  margin: 0 auto;
+  color: $boto-1;
+  font-family: $primary-font;
 }
 
 .title-header {
-    display: flex;
-    flex-direction: column;
-    .title {
-        font-weight: 500;
-        font-size: 16px;
-    }
-    .subtitle {
-        font-weight: 400;
-        font-size: 14px;
-    }
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .subtitle {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
 
 .seguidores {
-    border-radius: 15px;
-    padding: 7px 15px;
-    background-color: $background-p;
-    font-weight: 400;
-    font-size: 16px;
-    margin: 10px 0;
+  border-radius: 15px;
+  padding: 7px 15px;
+  background-color: $background-p;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 0;
 }
