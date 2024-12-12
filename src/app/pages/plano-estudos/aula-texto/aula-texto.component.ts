@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './aula-texto.component.scss',
 })
 export class AulaTextoComponent implements OnInit {
+  constructor(private location: Location) {}
+  goBack(): void {
+    this.location.back();
+  }
+
   aulaConcluida: boolean = false; // Estado do botão Concluir
   aulaFavorita: boolean = false; // Estado do botão Favoritar
 

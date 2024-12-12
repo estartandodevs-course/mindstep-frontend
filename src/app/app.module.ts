@@ -19,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './pages/home/home.module';
 import { ProximasAtividadesComponent } from './pages/proximas-atividades/proximas-atividades.component';
+import { PerfilProfissionalComponent } from './pages/perfil-profissional/perfil-profissional.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { ProximasAtividadesComponent } from './pages/proximas-atividades/proxima
     HomeComponent,
     ProximasAtividadesComponent,
     MetasDiariasComponent,
+    PerfilProfissionalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HomeModule, SharedModule],
   providers: [],

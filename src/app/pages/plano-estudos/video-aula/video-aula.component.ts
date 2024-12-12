@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 @Component({
   selector: 'app-video-aula',
@@ -5,6 +6,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrl: './video-aula.component.scss',
 })
 export class VideoAulaComponent implements OnInit, OnDestroy {
+  constructor(private location: Location) {}
+  goBack(): void {
+    this.location.back();
+  }
   minutos: number = 25;
   segundos: number = 0;
   rodando: boolean = false;

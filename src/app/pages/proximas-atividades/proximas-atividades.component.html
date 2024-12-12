@@ -1,6 +1,28 @@
 <div class="header">
-  <app-profile-header></app-profile-header>
+  <div class="header-content">
+    <div class="content-icon">
+      <button (click)="goBack()">
+        <img class="icon" src="../../../../assets/back.svg" alt="Voltar" />
+      </button>
+
+      <div class="seach-notification">
+        <button>
+          <img class="icon" src="../../../../assets/search.svg" alt="Buscar" />
+        </button>
+
+        <button>
+          <img class="icon notification" src="../../../../assets/notification.svg" alt="Notificações" />
+        </button>
+      </div>
+    </div>
+
+    <div class="img-profile">
+      <img src="../../../../assets/foto-teste.svg" alt="" />
+    </div>
+  </div>
+  <app-profile-header> </app-profile-header>
 </div>
+
 <div class="main-content">
   <h3>Próximas Atividades</h3>
   <div class="card-materia">

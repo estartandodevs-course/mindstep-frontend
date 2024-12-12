@@ -1,4 +1,5 @@
 //import { HttpClient } from '@angular/common/http';
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './proximas-atividades.component.scss',
 })
 export class ProximasAtividadesComponent implements OnInit {
+  constructor(private location: Location) {}
+  goBack(): void {
+    this.location.back();
+  }
   progress: number = 0;
   title: string = 'últimos 7 dias';
 
