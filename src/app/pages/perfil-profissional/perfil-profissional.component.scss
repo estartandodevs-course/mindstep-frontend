@@ -2,208 +2,208 @@
 @import '../../../styles/base/variables';
 @import '../../../styles/base/reset';
 .header-content {
-    width: 100vw;
-    position: absolute;
+  width: 100vw;
+  position: absolute;
 }
 
 .content-icon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 90vw;
-    width: 90vw;
-    margin: 0 auto;
-    padding-top: 25px;
-    button {
-        background: none;
-        cursor: pointer;
-    }
-    img {
-        width: 25px;
-        height: 25px;
-        background: none;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw;
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 25px;
+  button {
+    background: none;
+    cursor: pointer;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    background: none;
+  }
 }
 
 .img-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    img {
-        width: 90px;
-        height: 90px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .seach-notification {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .main-content {
-    width: 90vw;
-    margin: 0 auto;
-    color: $boto-1;
-    font-family: $primary-font;
+  width: 90vw;
+  margin: 0 auto;
+  color: $boto-1;
+  font-family: $primary-font;
 }
 
 .header {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .title-header {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    .title {
-        font-weight: 500;
-        font-size: 16px;
-    }
-    .subtitle {
-        font-weight: 400;
-        font-size: 14px;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .subtitle {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
 
 .seguidores {
-    border-radius: 6px;
-    padding: 7px 10px;
-    background-color: $background-p;
-    font-weight: 400;
-    font-size: 16px;
-    margin: 10px 0;
-    width: 140px;
-    text-align: center;
+  border-radius: 6px;
+  padding: 7px 10px;
+  background-color: $background-p;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 0;
+  width: 140px;
+  text-align: center;
 }
 
 .info-content {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .qualifiquacoes {
-    height: 250px;
-    width: 50%;
-    background-color: $background-p;
-    padding: 10px 5px;
-    border-radius: 7px;
-    .qualifiquacoes-content {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        h1 {
-            font-size: 20px;
-            font-weight: 700;
-        }
-        label {
-            font-weight: 600;
-            font-size: 18px;
-        }
-    }
-}
-
-.fotos {
-    height: 300px;
-    width: 50%;
+  height: 250px;
+  width: 50%;
+  background-color: $background-p;
+  padding: 10px 5px;
+  border-radius: 7px;
+  .qualifiquacoes-content {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    label {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}
+
+.fotos {
+  height: 300px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  img {
+    width: 154px;
+    height: 70px;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+.bio {
+  .bio-title {
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .bio-content {
+    background-color: $background-p;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    padding: 15px;
+    border-radius: 6px;
+  }
+}
+
+.footer-content {
+  position: relative;
+  bottom: -60px;
+  width: 100vw;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .icons {
+    display: flex;
+    gap: 15px;
+    a {
+      cursor: pointer;
+    }
     img {
-        width: 154px;
-        height: 70px;
-        border-radius: 6px;
-        object-fit: cover;
-        box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.4);
+      width: 26px;
+      height: 25px;
     }
+  }
+  .label {
+    color: #fff;
+    font-weight: 400;
+  }
 }
 
 .bio {
-    .bio-title {
-        h3 {
-            font-size: 16px;
-            font-weight: 400;
-        }
+  .bio-title {
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
     }
-    .bio-content {
-        background-color: $background-p;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 23px;
-        padding: 15px;
-        border-radius: 6px;
-    }
+  }
+  .bio-content {
+    background-color: $background-p;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    padding: 15px;
+    border-radius: 6px;
+  }
 }
 
 .footer-content {
-    position: relative;
-    bottom: -60px;
-    width: 100vw;
-    z-index: 101;
+  position: relative;
+  bottom: -60px;
+  width: 100vw;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    .icons {
-        display: flex;
-        gap: 15px;
-        a {
-            cursor: pointer;
-        }
-        img {
-            width: 26px;
-            height: 25px;
-        }
+    gap: 15px;
+    a {
+      cursor: pointer;
     }
-    .label {
-        color: #fff;
-        font-weight: 400;
+    img {
+      width: 26px;
+      height: 25px;
     }
-}
-
-.bio {
-    .bio-title {
-        h3 {
-            font-size: 16px;
-            font-weight: 400;
-        }
-    }
-    .bio-content {
-        background-color: $background-p;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 23px;
-        padding: 15px;
-        border-radius: 6px;
-    }
-}
-
-.footer-content {
-    position: relative;
-    bottom: -60px;
-    width: 100vw;
-    z-index: 101;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .icons {
-        display: flex;
-        gap: 15px;
-        a {
-            cursor: pointer;
-        }
-        img {
-            width: 26px;
-            height: 25px;
-        }
-    }
-    .label {
-        color: #fff;
-        font-weight: 400;
-    }
+  }
+  .label {
+    color: #fff;
+    font-weight: 400;
+  }
 }
