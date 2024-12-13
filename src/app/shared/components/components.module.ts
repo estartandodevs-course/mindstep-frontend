@@ -7,6 +7,6 @@ import { PontuacaoComponent } from './pontuacao/pontuacao.component';
 @NgModule({
   declarations: [HeaderProfileComponent, FooterComponent, PontuacaoComponent],
   imports: [CommonModule],
-  exports: [HeaderProfileComponent, FooterComponent],
+  exports: [HeaderProfileComponent, FooterComponent, PontuacaoComponent],
 })
 export class ComponentsModule {}

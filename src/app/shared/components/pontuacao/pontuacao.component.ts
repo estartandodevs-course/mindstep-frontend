@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-score',
+  selector: 'app-pontucao-component',
   templateUrl: './pontuacao.component.html',
   styleUrls: ['./pontuacao.component.scss'],
 })
-export class ScoreComponent {
+export class PontuacaoComponent {
   score: number = 76; // Exemplo de pontuação
   maxScore: number = 100; // Máximo de pontuação
 
