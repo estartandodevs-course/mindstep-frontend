@@ -1,0 +1,147 @@
+@import '../../../styles/base/fonts';
+@import '../../../styles/base/variables';
+@import '../../../styles/base/reset';
+.header-content {
+  width: 100vw;
+  position: absolute;
+}
+
+.content-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw;
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 25px;
+  button {
+    background: none;
+    cursor: pointer;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    background: none;
+  }
+}
+
+.img-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.seach-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.main-content {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9fc;
+  width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  h3 {
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 20px;
+    color: $boto-1;
+    text-align: center;
+    padding: 40px;
+    text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button-group button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: $botao-pressionado;
+  color: $boto-1;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-group button.active {
+  background-color: $boto-1;
+  color: white;
+}
+
+.calendario {
+  text-align: center;
+}
+
+.calendario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: $boto-1;
+  padding: 30px;
+  button {
+    background: none;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.dias-semana {
+  font-family: $primary-font;
+  font-weight: 500;
+  text-align: center;
+  color: $boto-1;
+  padding-bottom: 20px;
+}
+
+.dias-semana,
+.dias-mes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.dias-mes span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background-color: $botao-pressionado;
+  color: $boto-1;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.dias-mes span.aula {
+  background-color: $boto-1;
+  color: white;
+}
+
+.dias-mes span.hoje {
+  border: 1px solid #453e92;
+}

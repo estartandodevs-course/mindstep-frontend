@@ -1,0 +1,83 @@
+<div class="header">
+  <div class="header-content">
+    <div class="content-icon">
+      <button (click)="goBack()">
+        <img class="icon" src="../../../../assets/back.svg" alt="Voltar" />
+      </button>
+
+      <div class="seach-notification">
+        <button>
+          <img class="icon" src="../../../../assets/search.svg" alt="Buscar" />
+        </button>
+
+        <button>
+          <img class="icon notification" src="../../../../assets/notification.svg" alt="Notificações" />
+        </button>
+      </div>
+    </div>
+
+    <div class="img-profile">
+      <img src="../../../../assets/foto-teste.svg" alt="" />
+    </div>
+  </div>
+  <app-profile-header> </app-profile-header>
+</div>
+
+<div class="main-content">
+  <h3>Próximas Atividades</h3>
+  <div class="card-materia">
+    <div class="materia1 barra-materia">
+      <!--<div class="progress-container">
+                  <div class="progress-bar" [style.width.%]="progress"></div>
+                  <span class="progress-text">{{ progress }}% completo</span>-->
+      <div class="progress-container-header">
+        <ul>
+          <li>Português</li>
+        </ul>
+        <span>Questões 20</span>
+      </div>
+      <div class="progress-barra">
+        <div class="barra"></div>
+        <span class="porcentagem">5%</span>
+      </div>
+    </div>
+    <div class="materia2 barra-materia">
+      <div class="progress-container-header">
+        <ul>
+          <li>História</li>
+        </ul>
+        <span>Questões 20</span>
+      </div>
+      <div class="progress-barra">
+        <div class="barra"></div>
+        <span class="porcentagem">5%</span>
+      </div>
+    </div>
+    <div class="materia3 barra-materia">
+      <div class="progress-container-header">
+        <ul>
+          <li>Redação</li>
+        </ul>
+        <span>Questões 20</span>
+      </div>
+      <div class="progress-barra">
+        <div class="barra"></div>
+        <span class="porcentagem">5%</span>
+      </div>
+    </div>
+  </div>
+  <div class="chart-container">
+    <h3>{{ title }}</h3>
+    <div class="chart">
+      <div class="day" *ngFor="let day of days" [class.selected]="day.isSelected">
+        <span class="label">{{ day.label }}</span>
+        <div class="bar" [style.height]="day.height"></div>
+        <span class="time">{{ day.time }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,92 @@
+<div class="header">
+  <div class="header-content">
+    <div class="content-icon">
+      <button (click)="goBack()">
+        <img class="icon" src="../../../../assets/back.svg" alt="Voltar" />
+      </button>
+
+      <div class="seach-notification">
+        <button>
+          <img class="icon" src="../../../../assets/search.svg" alt="Buscar" />
+        </button>
+
+        <button>
+          <img class="icon notification" src="../../../../assets/notification.svg" alt="Notificações" />
+        </button>
+      </div>
+    </div>
+
+    <div class="img-profile">
+      <img src="../../../../assets/foto-teste.svg" alt="" />
+    </div>
+  </div>
+  <app-profile-header> </app-profile-header>
+</div>
+
+<div class="main-content">
+  <div class="button-container">
+    <!-- Botão Concluir -->
+    <div class="btn-concluir">
+      <button class="btn concluir" [class.active]="aulaConcluida" (click)="toggleConcluir()">
+        <span class="icon">&#x25BC;</span>
+        {{ aulaConcluida ? 'Concluído' : 'Concluir' }}
+      </button>
+    </div>
+
+    <!-- Botão Favoritar -->
+    <div class="btn-favoritar">
+      <button class="btn favoritar" [class.active]="aulaFavorita" (click)="toggleFavoritar()" title="Favoritar">
+        <span class="icon">
+          <img src="../../../../assets/gallery-video-aula/favoritar.svg" alt="" />
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="video-player">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <h3>Matemática e Estatísca</h3>
+    <input type="text" placeholder="Anotações..." class="notes-input" />
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-content">
+      <img src="../../../../assets/gallery-video-aula/image1.jpeg" alt="Miniatura 1" />
+      <img src="../../../../assets/gallery-video-aula/image2.jpeg" alt="Miniatura 2" />
+      <img src="../../../../assets/gallery-video-aula/image3.jpeg" alt="Miniatura 3" />
+      <img src="../../../../assets/gallery-video-aula/image4.jpeg" alt="Miniatura " />
+    </div>
+  </div>
+  <div class="pomodoro-timer">
+    <div class="title-pomodoro">
+      <h2>Pomodoro Timer</h2>
+    </div>
+
+    <div class="temporizador">
+      <div class="temp">
+        <h1>{{ minutos }}:{{ segundos | number: '2.0' }}</h1>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button (click)="iniciar()" [disabled]="rodando">
+        <img src="../../../../assets/pomodoro/play.svg" alt="" />
+      </button>
+      <button (click)="pausar()" [disabled]="!rodando">
+        <img src="../../../../assets/pomodoro/editar.svg" alt="" />
+      </button>
+      <button (click)="resetar()">
+        <img src="../../../../assets/pomodoro/relogio.svg" alt="" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer">
+    <a routerLink="atividade">
+      <button class="activity-btn">Atividade</button>
+    </a>
+  </div>
+  <app-footer></app-footer>
+</footer>

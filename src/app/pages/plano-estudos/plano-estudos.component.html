@@ -1,0 +1,110 @@
+<div class="header">
+  <div class="header-content">
+    <div class="content-icon">
+      <button (click)="goBack()">
+        <img class="icon" src="../../../../assets/back.svg" alt="Voltar" />
+      </button>
+
+      <div class="seach-notification">
+        <button>
+          <img class="icon" src="../../../../assets/search.svg" alt="Buscar" />
+        </button>
+
+        <button>
+          <img class="icon notification" src="../../../../assets/notification.svg" alt="Notificações" />
+        </button>
+      </div>
+    </div>
+
+    <div class="img-profile">
+      <img src="../../../../assets/foto-teste.svg" alt="" />
+    </div>
+  </div>
+  <app-profile-header> </app-profile-header>
+</div>
+
+<div class="home-content">
+  <h1 class="title-page">Plano de Estudo</h1>
+
+  <div class="cards">
+    <div class="card">
+      <img src="../../../assets/livro.svg" alt="" />
+      <div class="label-porcentagem">
+        <label for="">Matemática e Estatística</label>
+        <div class="porcentagem-icon">
+          <span>60%</span>
+          <img src="../../../assets/verificado.svg" alt="" />
+        </div>
+      </div>
+      <div class="caderno-video-icon">
+        <a routerLink="aula-texto">
+          <img src="../../../assets/caderno.svg" alt="" />
+        </a>
+        <a routerLink="aula-video">
+          <img src="../../../assets/video.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../../../assets/livro.svg" alt="" />
+      <div class="label-porcentagem">
+        <label for="">Português</label>
+        <div class="porcentagem-icon">
+          <span>5%</span>
+          <img src="../../../assets/verificado.svg" alt="" />
+        </div>
+      </div>
+      <div class="caderno-video-icon">
+        <a routerLink="aula-texto">
+          <img src="../../../assets/caderno.svg" alt="" />
+        </a>
+        <a routerLink="aula-video">
+          <img src="../../../assets/video.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../../../assets/livro.svg" alt="" />
+      <div class="label-porcentagem">
+        <label for="">História</label>
+        <div class="porcentagem-icon">
+          <span>10%</span>
+          <img src="../../../assets/verificado.svg" alt="" />
+        </div>
+      </div>
+      <div class="caderno-video-icon">
+        <a routerLink="aula-texto">
+          <img src="../../../assets/caderno.svg" alt="" />
+        </a>
+        <a routerLink="aula-video">
+          <img src="../../../assets/video.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../../../assets/livro.svg" alt="" />
+      <div class="label-porcentagem">
+        <label for="">Redação</label>
+        <div class="porcentagem-icon">
+          <span>2%</span>
+          <img src="../../../assets/verificado.svg" alt="" />
+        </div>
+      </div>
+      <div class="caderno-video-icon">
+        <a routerLink="aula-texto">
+          <img src="../../../assets/caderno.svg" alt="" />
+        </a>
+        <a routerLink="aula-video">
+          <img src="../../../assets/video.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <app-footer> </app-footer>
+</footer>

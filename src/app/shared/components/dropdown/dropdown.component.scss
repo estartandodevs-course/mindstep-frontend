@@ -1,0 +1,57 @@
+@import '../../../../styles/base/_variables';
+@import '../../../../styles/base/fonts';
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: $botao-pressionado;
+  color: $boto-1;
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 11px;
+  border: none;
+  border-radius: 5px;
+  width: 350px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.dropdown-btn svg {
+  width: 7px;
+  height: 16.521px;
+  color: $boto-1;
+  flex-shrink: 0;
+}
+
+.dropdown-menu {
+  width: 350px;
+  max-height: 300px;
+  border-radius: 7px;
+  background-color: $botao-pressionado;
+  margin: 5px 0 0 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 11px;
+  list-style: none;
+}
+
+.dropdown-item:hover {
+  color: $laranja;
+}
