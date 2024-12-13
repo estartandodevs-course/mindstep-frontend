@@ -1,0 +1,131 @@
+@import '../../../../styles/base/_variables';
+@import '../../../../styles/base/_fonts';
+
+.social-btn {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $primary-font;
+  font-weight: 400;
+  width: 167px;
+  height: 34px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 7px;
+
+  &.google {
+    background-color: $boto-1;
+    color: $botao-pressionado;
+    border: none;
+    padding: 10px;
+
+    &:hover {
+      background-color: $botao-pressionado;
+      color: $boto-1;
+    }
+    &:disabled {
+      background-color: none;
+      color: $boto-1;
+      cursor: not-allowed;
+    }
+  }
+
+  &.google-secondary {
+    background-color: $cinza-inativo-1;
+    color: $cinza-inativo;
+    border: none;
+    padding: 10px;
+
+    &:hover {
+      background-color: $cinza-inativo;
+      color: $cinza-inativo-1;
+    }
+    &:disabled {
+      background-color: none;
+      color: $cinza-inativo-1;
+      cursor: not-allowed;
+    }
+  }
+
+  &.google-icon {
+    background-color: $botao-pressionado;
+    color: $boto-1;
+    border: none;
+    padding: 10px;
+    background-image: url('/assets/icons/google-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left 45px center;
+    padding-left: 30px;
+  }
+  &.facebook {
+    background-color: $botao-pressionado;
+    color: $boto-1;
+    border: none;
+    padding: 10px;
+    background-image: url('/assets/icons/facebook-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left 39px center;
+    padding-left: 30px;
+  }
+  &.email {
+    background-color: $botao-pressionado;
+    color: $boto-1;
+    border: none;
+    padding: 10px;
+    background-image: url('/assets/icons/email-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left 48px center;
+    padding-left: 30px;
+
+    &.disable {
+      background-color: none;
+      cursor: not-allowed;
+    }
+  }
+
+  &.email-secondary {
+    background-color: $cinza-inativo;
+    border: none;
+    padding: 10px;
+    background-image: url('/assets/icons/email-alt-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 30px;
+
+    &.disable {
+      background-color: none;
+      cursor: not-allowed;
+    }
+  }
+  &.google-secondary-icon {
+    background-color: $cinza-inativo;
+    border: none;
+    padding: 10px;
+    background-image: url('/assets/icons/google-alt-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 30px;
+
+    &.disable {
+      background-color: none;
+      cursor: not-allowed;
+    }
+  }
+  &.facebook-secondary {
+    background-color: $cinza-inativo;
+    border: none;
+    padding: 10px;
+    background-image: url('/assets/icons/facebook-alt-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 30px;
+
+    &.disable {
+      background-color: none;
+      cursor: not-allowed;
+    }
+  }
+}

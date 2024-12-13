@@ -1,0 +1,85 @@
+<div class="header">
+  <div class="header-content">
+    <div class="content-icon">
+      <button (click)="goBack()">
+        <img class="icon" src="../../../../assets/back.svg" alt="Voltar" />
+      </button>
+
+      <div class="seach-notification">
+        <button>
+          <img class="icon" src="../../../../assets/search.svg" alt="Buscar" />
+        </button>
+
+        <button>
+          <img class="icon notification" src="../../../../assets/notification.svg" alt="Notificações" />
+        </button>
+      </div>
+    </div>
+
+    <div class="img-profile">
+      <img src="../../../../assets/foto-teste.svg" alt="" />
+    </div>
+  </div>
+  <app-profile-header> </app-profile-header>
+</div>
+
+<div class="main-content">
+  <div class="title-header">
+    <h1 class="title">{{ title }}</h1>
+    <h2 class="subtitle">{{ subtitle }}</h2>
+  </div>
+  <div class="seguidores">{{ seguidores }}</div>
+  <div class="info-content">
+    <div class="qualifiquacoes">
+      <div class="qualifiquacoes-content">
+        <h1>{{ nivel }}</h1>
+        <div class="qualifiquacao1 qualifiquacao">
+          <label for="">Memória</label>
+          <span class="desenvolvimento"></span>
+        </div>
+        <div class="qualifiquacao2 qualifiquacao">
+          <label for="">Comunicação</label>
+          <span class="desenvolvimento"></span>
+        </div>
+        <div class="qualifiquacao1 qualifiquacao">
+          <label for="">Raciocínio Lógico</label>
+          <span class="desenvolvimento"></span>
+        </div>
+        <!--<mat-toolbar color="primary"></mat-toolbar>
+                <mat-icon *ngFor="let start of maxRatingArr"></mat-icon>-->
+      </div>
+    </div>
+    <div class="fotos">
+      <img src="../../../assets/foto-perfil-profissional/066051195a1eec98e4cfbaf8158f9fa5.jpeg" alt="" />
+      <img src="../../../assets/foto-perfil-profissional/7e414fa689420a20d054fe1cb24cce9c.jpeg" alt="" />
+      <img src="../../../assets/foto-perfil-profissional/aa1f0dae0f6aa74662e823040a98a409.jpeg" alt="" />
+    </div>
+  </div>
+  <div class="bio">
+    <div class="bio-title">
+      <h3>Minha bio</h3>
+    </div>
+    <div class="bio-content">
+      {{ bioText }}
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-content">
+    <div class="icons">
+      <a href="">
+        <img src="../../../assets/foto-perfil-profissional/email.svg" alt="" />
+      </a>
+      <a href="">
+        <img src="../../../assets/foto-perfil-profissional/instagram.svg" alt="" />
+      </a>
+      <a href="">
+        <img src="../../../assets/foto-perfil-profissional/linkedin.svg" alt="" />
+      </a>
+    </div>
+    <div class="label">
+      <label for="">compartilhar perfil</label>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

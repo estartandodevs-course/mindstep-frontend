@@ -1,0 +1,35 @@
+<div class="header">
+  <app-profile-header></app-profile-header>
+  <div class="slider-container">
+    <div class="name-game">Memória</div>
+    <div class="labels">
+      <span>Fácil</span>
+      <span>Moderado</span>
+      <span>Difícil</span>
+    </div>
+    <input type="range" min="0" max="100" value="50" class="slider" />
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="game-board">
+    <div
+      class="card"
+      *ngFor="let card of cards"
+      [class.flipped]="card.flipped"
+      [class.matched]="card.matched"
+      (click)="flipCard(card)">
+      <div class="front" *ngIf="card.flipped || card.matched">
+        <img [src]="card.image" alt="Card Image" />
+      </div>
+      <div class="back" *ngIf="!card.flipped && !card.matched">
+        <label for="">MindStep</label>
+      </div>
+    </div>
+  </div>
+  <button *ngIf="showConcluirButton" class="complete-button" (click)="onComplete()">Concluir</button>
+</div>
+
+<div class="footer">
+  <app-footer></app-footer>
+</div>
