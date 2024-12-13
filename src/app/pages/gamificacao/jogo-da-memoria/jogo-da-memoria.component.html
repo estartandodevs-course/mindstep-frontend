@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <button class="complete-button" (click)="onComplete()">Concluir</button>
+  <button *ngIf="showConcluirButton" class="complete-button" (click)="onComplete()">Concluir</button>
 </div>
 
 <div class="footer">

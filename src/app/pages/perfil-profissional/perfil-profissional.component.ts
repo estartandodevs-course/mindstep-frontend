@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './perfil-profissional.component.scss',
 })
 export class PerfilProfissionalComponent {
+  constructor(private location: Location) {}
+  goBack(): void {
+    this.location.back();
+  }
   /*
   @Input() maxRating = 5;
   maxRatingArr: any = [];

@@ -12,6 +12,7 @@ interface Card {
   styleUrl: './jogo-da-memoria.component.scss',
 })
 export class JogoDaMemoriaComponent implements OnInit {
+  showConcluirButton = false;
   cards: Card[] = [];
   flippedCards: Card[] = [];
   lockBoard: boolean = false;
@@ -21,7 +22,7 @@ export class JogoDaMemoriaComponent implements OnInit {
   }
 
   setupGame(): void {
-    const images = ['assets/image1.png', 'assets/image2.png']; // Substitua pelos caminhos das imagens reais
+    const images = ['assets/jogo-memoria/homem.jpeg', 'assets/jogo-memoria/mulher.jpeg'];
     const deck = [...images, ...images].map((image, index) => ({
       id: index,
       image,
@@ -53,6 +54,7 @@ export class JogoDaMemoriaComponent implements OnInit {
       card1.matched = true;
       card2.matched = true;
       this.flippedCards = [];
+      this.showConcluirButton = true;
     } else {
       this.lockBoard = true;
       setTimeout(() => {

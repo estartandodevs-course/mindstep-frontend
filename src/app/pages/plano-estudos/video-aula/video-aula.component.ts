@@ -1,15 +1,25 @@
 import { Location } from '@angular/common';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
+import { EstadoAulasService } from '../../../core/services/estado-aulas.service';
 @Component({
   selector: 'app-video-aula',
   templateUrl: './video-aula.component.html',
   styleUrl: './video-aula.component.scss',
 })
 export class VideoAulaComponent implements OnInit, OnDestroy {
-  constructor(private location: Location) {}
+  constructor(
+    private location: Location,
+    private estadoAulasService: EstadoAulasService,
+  ) {}
   goBack(): void {
     this.location.back();
   }
+  // Passar o estado para o calendário
+  @Output() aulaConcluidaChange = new EventEmitter<number>();
+  diaAtual: number = new Date().getDate(); // Exemplo: dia atual
+  aulaConcluida: boolean = false; // Estado do botão Concluir
+  aulaFavorita: boolean = false; // Estado do botão Favoritar
+
   minutos: number = 25;
   segundos: number = 0;
   rodando: boolean = false;
@@ -17,9 +27,6 @@ export class VideoAulaComponent implements OnInit, OnDestroy {
   private intervalId: any = null;
   private descansoCurto: number = 5;
   private descansoLongo: number = 25;
-
-  aulaConcluida: boolean = false; // Estado do botão Concluir
-  aulaFavorita: boolean = false; // Estado do botão Favoritar
 
   ngOnInit() {
     this.carregarEstado();
@@ -131,6 +138,9 @@ export class VideoAulaComponent implements OnInit, OnDestroy {
 
     // Salva no localStorage
     localStorage.setItem('aulaConcluida', JSON.stringify(this.aulaConcluida));
+    if (this.aulaConcluida) {
+      this.estadoAulasService.adicionarDiaConcluido(this.diaAtual);
+    }
   }
 
   // Alterna o estado do botão Favoritar

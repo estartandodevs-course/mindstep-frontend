@@ -1,25 +1,41 @@
-import { Component } from '@angular/core';
+import { Location } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { EstadoAulasService } from '../../core/services/estado-aulas.service';
 
 @Component({
   selector: 'app-metas-diarias',
   templateUrl: './metas-diarias.component.html',
-  styleUrl: './metas-diarias.component.scss',
+  styleUrls: ['./metas-diarias.component.scss'], // Correção do nome da propriedade
 })
-export class MetasDiariasComponent {
+export class MetasDiariasComponent implements OnInit {
+  @Input() diasComAulasConcluidas: number[] = []; // Corrigido para ficar fora de ngOnInit
+
   periodos: string[] = ['Dia', 'Semana', 'Mês', 'Ano'];
   periodoSelecionado: string = 'Dia';
 
   diasSemana: string[] = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
 
-  // Datas
   mesAtual: Date = new Date();
-  diasDoMes: number[] = [];
+  diasDoMes: number[] = []; // Aceita números ou `null`
   diaAtual: number = new Date().getDate();
 
   // Dias com aulas
-  diasComAulas: number[] = [1, 3, 5, 12, 15, 21]; // Exemplo fixo; substitua pela lógica de dados.
+  diasComAulas: number[] = [1, 3, 5, 12, 15, 21]; // Exemplo fixo
 
-  constructor() {
+  diasConcluidos: number[] = []; // Para armazenar os dias concluídos
+
+  constructor(
+    private location: Location,
+    private estadoAulasService: EstadoAulasService,
+  ) {}
+
+  ngOnInit(): void {
+    this.estadoAulasService.diasConcluidos$.subscribe((dias) => (this.diasConcluidos = dias));
+    this.atualizarCalendario();
+  }
+
+  goBack(): void {
+    this.location.back();
     this.atualizarCalendario();
   }
 
@@ -32,7 +48,7 @@ export class MetasDiariasComponent {
 
     // Adiciona um offset para alinhar os dias da semana
     for (let i = 0; i < primeiroDia; i++) {
-      this.diasDoMes.unshift(null as any); // Usa `null` para indicar espaços em branco
+      this.diasDoMes.unshift(0); // Usa `null` para indicar espaços em branco
     }
   }
 
@@ -41,7 +57,6 @@ export class MetasDiariasComponent {
     this.atualizarCalendario();
   }
 
-  // Propriedade que retorna o mês formatado em português com as 3 primeiras letras
   get mesAtualFormatado(): string {
     return new Intl.DateTimeFormat('pt-BR', { month: 'short' }).format(this.mesAtual);
   }

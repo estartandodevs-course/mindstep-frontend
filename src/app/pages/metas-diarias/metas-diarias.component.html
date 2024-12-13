@@ -1,5 +1,26 @@
 <div class="header">
-  <app-profile-header></app-profile-header>
+  <div class="header-content">
+    <div class="content-icon">
+      <button (click)="goBack()">
+        <img class="icon" src="../../../../assets/back.svg" alt="Voltar" />
+      </button>
+
+      <div class="seach-notification">
+        <button>
+          <img class="icon" src="../../../../assets/search.svg" alt="Buscar" />
+        </button>
+
+        <button>
+          <img class="icon notification" src="../../../../assets/notification.svg" alt="Notificações" />
+        </button>
+      </div>
+    </div>
+
+    <div class="img-profile">
+      <img src="../../../../assets/foto-teste.svg" alt="" />
+    </div>
+  </div>
+  <app-profile-header> </app-profile-header>
 </div>
 <div class="main-content">
   <h3>Metas Diárias</h3>
@@ -26,7 +47,9 @@
       <span *ngFor="let dia of diasSemana">{{ dia }}</span>
     </div>
     <div class="dias-mes">
-      <span *ngFor="let dia of diasDoMes" [ngClass]="{ aula: diasComAulas.includes(dia), hoje: dia === diaAtual }">
+      <span
+        *ngFor="let dia of diasDoMes"
+        [ngClass]="{ aula: diasComAulas.includes(dia), concluido: diasComAulasConcluidas.includes(dia), hoje: dia === diaAtual }">
         {{ dia }}
       </span>
     </div>

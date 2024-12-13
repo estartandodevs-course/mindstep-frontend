@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './atividade.component.scss',
 })
 export class AtividadeComponent {
+  constructor(private location: Location) {}
+  goBack(): void {
+    this.location.back();
+  }
   comment: string = '';
 }
